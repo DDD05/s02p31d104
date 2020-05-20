@@ -1,114 +1,132 @@
+@@ -0,0 +1,160 @@
 <template>
   <v-content>
     <v-container>
-      <div class="container-fluid">
-        <div class="row no-gutter">
-          <div class="image col-lg-6 col-md-12 col-sm-12">
-            <img
-              src="https://search.pstatic.net/common/?src=http%3A%2F%2Fpost.phinf.naver.net%2FMjAxODAxMDlfMjgy%2FMDAxNTE1NDcxOTgwNzMy.SwBdmOqNPVBGl00FcD_Qt1A7-oQ4Z91Y-vxcVYBcEB8g.1WACHs_iAy_reXQCyG7kNSPejearErbneyu0h122L6Ag.JPEG%2FIRhV1J37bSVke3lLZNsdWwj1aNGE.jpg&type=b400"
-            />
-          </div>
-          <div class="col-md-12 col-lg-6 col-sm-12">
-            <div class="login d-flex align-items-center py-5">
-              <div class="container">
-                <div class="row">
-                  <div class="col-md-9 col-lg-8 mx-auto">
-                    <h3 class="login-heading mb-4">Login</h3>
-                    <form>
-                      <div class="form-label-group">
-                        <input type="id" id="id" v-model="id" class="form-control" placeholder="id" required autofocus />
-                      </div>
-                      <br />
-                      <div class="form-label-group">
-                        <input type="password" id="password" v-model="password" class="form-control" placeholder="Password" required />
-                      </div>
+      <v-row class="text-center">
+        <v-col cols="12">
+          <v-img :src="require('../assets/logo.svg')" class="my-3" contain height="200" />
+        </v-col>
 
-                      <br />
-                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" @click="login()">
-                        Login
-                      </button>
-                      <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="button" @click="signup()">
-                        Sign in
-                      </button>
-                      <div class="text-center">
-                        <button @click="searchPW()"><a class="small">Forgot password?</a></button>
-                      </div>
-                      <hr />
-                      <div style="text-align: center;">SNS Login</div>
-                      <br />
-                      <v-card-actions>
-                        <v-spacer />
-                        <v-btn color="yellow" large @click="kakaologin()">Kakao Login</v-btn>
-                        <v-btn color="success" large @click="naverlogin()">Naver Login</v-btn>
-                        <v-spacer />
-                      </v-card-actions>
-                    </form>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+        <v-col class="mb-4">
+          <h1 class="display-2 font-weight-bold mb-3">
+            Welcome to Vuetify
+          </h1>
+
+          <p class="subheading font-weight-regular">
+            For help and collaboration with other Vuetify developers,
+            <br />please join our online
+            <a href="https://community.vuetifyjs.com" target="_blank">Discord Community</a>
+          </p>
+        </v-col>
+
+        <v-col class="mb-5" cols="12">
+          <h2 class="headline font-weight-bold mb-3">
+            What's next?
+          </h2>
+
+          <v-row justify="center">
+            <a v-for="(next, i) in whatsNext" :key="i" :href="next.href" class="subheading mx-3" target="_blank">
+              {{ next.text }}
+            </a>
+          </v-row>
+        </v-col>
+
+        <v-col class="mb-5" cols="12">
+          <h2 class="headline font-weight-bold mb-3">
+            Important Links
+          </h2>
+
+          <v-row justify="center">
+            <a v-for="(link, i) in importantLinks" :key="i" :href="link.href" class="subheading mx-3" target="_blank">
+              {{ link.text }}
+            </a>
+          </v-row>
+        </v-col>
+
+        <v-col class="mb-5" cols="12">
+          <h2 class="headline font-weight-bold mb-3">
+            Ecosystem
+          </h2>
+
+          <v-row justify="center">
+            <a v-for="(eco, i) in ecosystem" :key="i" :href="eco.href" class="subheading mx-3" target="_blank">
+              {{ eco.text }}
+            </a>
+          </v-row>
+        </v-col>
+      </v-row>
     </v-container>
   </v-content>
 </template>
 
-<style>
-.image img {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>
 <script>
-import axios from "axios";
+import api from "../api/axiosScript.js";
 export default {
-  name: "Login",
-
+  name: "HelloWorld",
+  components: {},
   data: () => ({
-    id: "",
-    password: "",
+    ecosystem: [
+      {
+        text: "vuetify-loader",
+        href: "https://github.com/vuetifyjs/vuetify-loader",
+      },
+      {
+        text: "github",
+        href: "https://github.com/vuetifyjs/vuetify",
+      },
+      {
+        text: "awesome-vuetify",
+        href: "https://github.com/vuetifyjs/awesome-vuetify",
+      },
+    ],
+    importantLinks: [
+      {
+        text: "Documentation",
+        href: "https://vuetifyjs.com",
+      },
+      {
+        text: "Chat",
+        href: "https://community.vuetifyjs.com",
+      },
+      {
+        text: "Made with Vuetify",
+        href: "https://madewithvuejs.com/vuetify",
+      },
+      {
+        text: "Twitter",
+        href: "https://twitter.com/vuetifyjs",
+      },
+      {
+        text: "Articles",
+        href: "https://medium.com/vuetify",
+      },
+    ],
+    whatsNext: [
+      {
+        text: "Explore components",
+        href: "https://vuetifyjs.com/components/api-explorer",
+      },
+      {
+        text: "Select a layout",
+        href: "https://vuetifyjs.com/layout/pre-defined",
+      },
+      {
+        text: "Frequently Asked Questions",
+        href: "https://vuetifyjs.com/getting-started/frequently-asked-questions",
+      },
+    ],
   }),
+  computed: {
+    userAuth() {
+      return this.$store.getters.userAuth;
+    },
+  },
   methods: {
-    login() {
-      console.log("로그인 !!!");
-      alert("로그인!!!");
-
-      const formData = {
-        id: this.id,
-        password: this.password,
-      };
-
-      console.log(formData);
-
-      axios
-        .post("/api/data", formData)
-        .then((res) => {
-          console.log(res.data);
-        })
-        .catch((error) => console.log(error));
-    },
-    backpage() {
-      this.$router.go(-1);
-    },
-    signup() {
-      console.log("회원가입 페이지 이동");
-      alert("회원가입 페이지 이동");
-      // this.$router.push("/signup");
-    },
-    kakaologin() {
-      console.log("카카오 로그인 연 결");
-      alert("카카오 로그인 연결");
-    },
-    naverlogin() {
-      console.log("네이버 로그인 연결");
-      alert("네이버 로그인 연결");
-    },
-    searchPW() {
-      console.log("비밀번호 찾기");
-      alert("비밀번호 찾기");
+    axiosTest() {
+      api.getTest(
+        (res) => console.log(res),
+        (error) => console.log(error)
+      );
     },
   },
 };

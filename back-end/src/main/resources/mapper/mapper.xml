@@ -3,27 +3,27 @@
 
 <mapper namespace="com.help.back.backend.dao.UserDao">
     <select id="getUsers"  resultType="com.help.back.backend.domain.User">
-        select * from user
+        select * from users
     </select>
     <select id="getUsersByName" parameterType="String" resultType="com.help.back.backend.domain.User">
-        select * from user where name LIKE "%${value}%"
+        select * from users where name LIKE "%${value}%"
     </select>
     <select id="getUsersByEmail" parameterType="String" resultType="com.help.back.backend.domain.User">
-        select * from user where email LIKE "%${value}%"
+        select * from users where email LIKE "%${value}%"
     </select>
-    <select id="getUsersById" parameterType="String" resultType="com.help.back.backend.domain.User">
-        select * from user where user_id LIKE "%${value}%"
+    <select id="getUsersById" parameterType="int" resultType="com.help.back.backend.domain.User">
+        select * from users where user_id = #{value}
     </select>
     <insert id="postUser" parameterType="com.help.back.backend.domain.User">
         INSERT INTO
-        user(user_id, password, name, email, birthday, phone_number)
-        Values(#{user_id}, #{password}, #{name}, #{email}, #{birthday}, #{phone_number})
+        users(password, name, email, birthday, phone_number)
+        Values(#{password}, #{name}, #{email}, #{birthday}, #{phone_number})
     </insert>
     <update id="updateUser" parameterType="com.help.back.backend.domain.User">
-        UPDATE user SET password = #{password}, name = #{name}, email = #{email}, birthday = #{birthday}, phone_number = #{phone_number}
+        UPDATE users SET password = #{password}, name = #{name}, email = #{email}, birthday = #{birthday}, phone_number = #{phone_number}
         WHERE user_id = #{user_id}
     </update>
-    <delete id="deleteUser" parameterType="String">
-        DELETE FROM user WHERE user_id = #{value}
+    <delete id="deleteUser" parameterType="int">
+        DELETE FROM users WHERE user_id = #{value}
     </delete>
 </mapper>

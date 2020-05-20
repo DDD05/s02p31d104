@@ -16,7 +16,7 @@
                     <h3 class="login-heading mb-4">Login</h3>
                     <form>
                       <div class="form-label-group">
-                        <input type="email" id="email" v-model="email" class="form-control" placeholder="Email address" required autofocus />
+                        <input type="id" id="id" v-model="id" class="form-control" placeholder="id" required autofocus />
                       </div>
                       <br />
                       <div class="form-label-group">
@@ -68,19 +68,27 @@ export default {
   name: "Login",
 
   data: () => ({
-    name: "",
-    email: "",
+    id: "",
     password: "",
-    emailRules: [(v) => !!v || "E-mail is required", (v) => /.+@.+\..+/.test(v) || "E-mail must be valid"],
   }),
   methods: {
     login() {
       console.log("로그인 !!!");
       alert("로그인!!!");
 
-      axios.get("/api/data").then((res) => {
-        console.log(res.data);
-      });
+      const formData = {
+        id: this.id,
+        password: this.password,
+      };
+
+      console.log(formData);
+
+      axios
+        .post("/api/data", formData)
+        .then((res) => {
+          console.log(res.data);
+        })
+        .catch((error) => console.log(error));
     },
     backpage() {
       this.$router.go(-1);

@@ -1,5 +1,5 @@
 <template>
-  <v-footer app :color="themeColor" class="lighten-1 white--text text-center">
+  <v-footer :color="themeColor" app class="lighten-1 white--text text-center">
     <v-card-text>
       <v-btn
         v-for="(icon, idx) in icons"
