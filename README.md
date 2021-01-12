@@ -59,6 +59,32 @@
 
 <br>
 
+## ▶️ Run
+
+### docker 설치되어 있을경우
+
+```
+    cd ./s02p31d104
+    docker-compose up
+```
+
+### docker 없을 경우
+
+-   java 1.8 version
+-   node.js
+-   RDB (helpromise schema)
+    -   user : dev
+    -   pwd : q1w2e3r4
+
+```
+    java -jar ./back-end/build/libs/back-end-1.0-SNAPSHOT.jar springboot.jar
+
+    cd front-end
+    npm run serve
+```
+
+<br>
+
 ## 디자인
 
 ![투두리스트](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c905ee20-8af0-47b4-a3c5-4eaa04c9b817/.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=60df99cf45ca5919c0b82a99a4a26a474dc86ef86fbd41c6393747776c0dd0ec&X-Amz-SignedHeaders=host)
