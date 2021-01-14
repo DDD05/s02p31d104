@@ -88,9 +88,9 @@
 
 ## 디자인
 
-![투두리스트](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/c905ee20-8af0-47b4-a3c5-4eaa04c9b817/.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=60df99cf45ca5919c0b82a99a4a26a474dc86ef86fbd41c6393747776c0dd0ec&X-Amz-SignedHeaders=host)
-![일정 등록](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b8430cfd-cbea-4a83-b32f-1d4017c69da8/_.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=6ab52d1b48dba7be163ff25fe74215c06cb9f1df7a0b0b6979c35344aa147aba&X-Amz-SignedHeaders=host)
-![일정을 4가지 방식으로 보기 & 미니 달력](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/ad0abacf-6576-40b0-a76f-308d00ae2806/_.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=4828ea83a1584d5465267210ac15ea3d42444e1e969953faf851544b29398e21&X-Amz-SignedHeaders=host)
-![구글 iCal 주소 데이터 가져오기](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/596d7e1f-2c57-4caa-aa77-e6f7cecd42cf/__.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=aaad7423d62bc253478d1dce255bae052a996f8689ee248495033e28716dfe96&X-Amz-SignedHeaders=host)
-![그룹 일정을 통해 사용자들의 일정을 색상별로 구분 & 실시간 채팅](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/3e3d965b-a1a7-4143-a860-faa7f7846aee/.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=764ecc0e826dbb60b8bb0addbc490af33f29e7c53e24358672c26954856019ea&X-Amz-SignedHeaders=host)
-![팔로우 추가](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/641513cd-c8e9-41f6-9421-0a3c2452e739/.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20210112%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20210112T071529Z&X-Amz-Expires=86400&X-Amz-Signature=1fd5b02b56e0b60f8e2f6b5b4362ed59812477484af989433cccaea228dbe4e5&X-Amz-SignedHeaders=host)
+![투두리스트](./readmeRef/helpromise01.gif)
+![일정 등록](./readmeRef/helpromise02.gif)
+![일정을 4가지 방식으로 보기 & 미니 달력](./readmeRef/helpromise03.gif)
+![구글 iCal 주소 데이터 가져오기](./readmeRef/helpromise04.gif)
+![그룹 일정을 통해 사용자들의 일정을 색상별로 구분 & 실시간 채팅](./readmeRef/helpromise05.gif)
+![팔로우 추가](./readmeRef/helpromise06.gif)
